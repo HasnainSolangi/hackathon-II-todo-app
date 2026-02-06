@@ -1,0 +1,34 @@
+# Gitignore for Todo Full-Stack Web Application
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Node.js / TypeScript
+node_modules/
+dist/
+build/
+*.log
+.env*
+.next/
+out/
+
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
