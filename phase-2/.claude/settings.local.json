@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(.specify/scripts/powershell/create-new-feature.ps1 -Json -Number 1 -ShortName \"todo-web-app\" \"/sp.specify Todo Full-Stack Web Application – Phase II\n\nTarget: Transform Phase I console app into authenticated multi-user web application.\n\nScope:\n- Implement Basic Level features only\n- Add authentication using Better Auth \\(JWT-based\\)\n- Create REST API with FastAPI\n- Persist tasks in Neon PostgreSQL using SQLModel\n- Build responsive Next.js frontend\n\nSuccess criteria:\n- Users can sign up and sign in\n- JWT token attached to every API request\n- Backend verifies JWT using shared secret\n- Users only see their own tasks\n- CRUD operations fully functional via UI\n- Data persists after server restart\n\nAPI Endpoints \\(must implement exactly\\):\n\nGET    /api/{user_id}/tasks\nPOST   /api/{user_id}/tasks\nGET    /api/{user_id}/tasks/{id}\nPUT    /api/{user_id}/tasks/{id}\nDELETE /api/{user_id}/tasks/{id}\nPATCH  /api/{user_id}/tasks/{id}/complete\n\nConstraints:\n- No chatbot endpoints\n- No filtering, sorting, priorities, tags\n- No recurring tasks or due dates\n- No event-driven logic\n- No Docker/Kubernetes\n- No Phase III, IV, V logic\n- Only necessary files created\n- Follow Spec-Kit monorepo structure\n\nNot building:\n- AI chatbot\n- MCP tools\n- Kubernetes configs\n- Kafka integration\n- Dapr integration\n- Advanced features\")",
-      "Bash(.specify/scripts/powershell/setup-plan.ps1:*)"
+      "Bash(.specify/scripts/powershell/setup-plan.ps1:*)",
+      "Bash(dir:*)",
+      "Bash(python -m uvicorn:*)",
+      "Bash(timeout 5 curl -s http://127.0.0.1:8000/api/health)"
     ]
   }
 }
